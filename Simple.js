@@ -15,7 +15,7 @@ function button(text, location) {
 @Makes click handlers simple
 @param id: ID of element to attatch handler
 @param callback: Name of function to execute when clicked
-@called by: click("lolrus", "fun");
+@called by: click("lolrus", "fun()");
 */
 function click(id, callback) {
     $('#' + id).attr("onclick", callback);
