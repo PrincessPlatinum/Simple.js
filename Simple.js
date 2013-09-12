@@ -10,3 +10,13 @@
 function button(text, location) {
     $('#' + location).append('<a class="wikia-button" id="' + text + '">' + text + '</a>');
 }
+
+/*
+@Makes click handlers simple
+@param id: ID of element to attatch handler
+@param callback: Name of function to execute when clicked
+@called by: click("lolrus", "fun");
+*/
+function click(id, callback) {
+    $('#' + id).click(callback);
+}
