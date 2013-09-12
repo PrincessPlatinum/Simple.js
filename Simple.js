@@ -18,5 +18,5 @@ function button(text, location) {
 @called by: click("lolrus", "fun");
 */
 function click(id, callback) {
-    $('#' + id).click(callback);
+    $('#' + id).attr("onclick", callback);
 }
