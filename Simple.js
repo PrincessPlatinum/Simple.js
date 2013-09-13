@@ -1,22 +1,39 @@
-//Simple.js
-//Simplified JavaScript for Wikia stuff
-
-/*
-@Makes it easy for beginners to make buttons
-@param text: button to appear on text
-@param location: ID of element to append to
-@called by: button("Hello World!", "WikiaRail");
+/* 
+@A framework that makes diving into Wikia user scripting easier 
+@Written by Wikia user:
+@Licensed under CC-BY-SA
 */
-function button(text, location) {
-    $('#' + location).append('<a class="wikia-button" id="' + text + '">' + text + '</a>');
+
+function sim(id) {
+ 
+   var about = {
+      Version: 0.1,
+      Author: "Maria Williams",
+      Created: "Fall 2013",
+      Updated: "13 September 2013"
+   };
+ 
+   if (id) {
+ 
+      if (window === this) {
+         return new sim(id);
+      }
+
+      this.e = document.getElementById(id);
+      return this;
+   } else {
+      return about;
+   }
 }
 
-/*
-@Makes click handlers simple
-@param id: ID of element to attatch handler
-@param callback: Name of function to execute when clicked
-@called by: click("lolrus", "fun()");
-*/
-function click(id, callback) {
-    $('#' + id).attr("onclick", callback);
-}
+sim.prototype = {
+	button: function(text) {
+		$(this).append('<a class="wikia-button" id="' + text + '">' + text + '</a>');
+		return this;
+    },
+
+	addClick: function(handler) {
+		$(this).attr('onclick', handler);
+		return this;
+	}
+};
