@@ -21,20 +21,20 @@ function Sim(id) {
 
       this.e = document.getElementById(id);
       return this;
+      return about;
    }
 }
 
 Sim.prototype = {
 	button: function(text) {
-                var container = document.getElementById(this.e);
 		var button = '<a class="wikia-button" id="' + text + '">' + text + '</a>';
 		var buttonode = document.createTextNode(button);
-                container.appendChild(buttonode);
+                this.e.appendChild(buttonode);
 		return this;
         },
 
 	addClick: function(handler) {
-		document.getElementById(this.e).setAttribute("onclick", handler);
+		this.e.setAttribute("onclick", handler);
 		return this;
 	},
 };
