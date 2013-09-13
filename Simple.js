@@ -4,7 +4,7 @@
 @Licensed under CC-BY-SA
 */
 
-function sim(id) {
+function Sim(id) {
  
    var about = {
       Version: 0.1,
@@ -16,7 +16,7 @@ function sim(id) {
    if (id) {
  
       if (window === this) {
-         return new sim(id);
+         return new Sim(id);
       }
 
       this.e = document.getElementById(id);
@@ -26,7 +26,7 @@ function sim(id) {
    }
 }
 
-sim.prototype = {
+Sim.prototype = {
 	button: function(text) {
 		var button = '<a class="wikia-button" id="' + text + '">' + text + '</a>';
 		document.getElementById(this.e).innerHTML += button;
