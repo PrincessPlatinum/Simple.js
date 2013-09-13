@@ -24,16 +24,17 @@ function sim(id) {
    } else {
       return about;
    }
+   console.log(about);
 }
 
 sim.prototype = {
 	button: function(text) {
-		$('#' + this).append('<a class="wikia-button" id="' + text + '">' + text + '</a>');
+		$('#' + this.e).append('<a class="wikia-button" id="' + text + '">' + text + '</a>');
 		return this;
         },
 
 	addClick: function(handler) {
-		$('#' + this).attr('onclick', handler);
+		$('#' + this.e).attr('onclick', handler);
 		return this;
 	}
 };
