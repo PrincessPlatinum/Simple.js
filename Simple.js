@@ -30,7 +30,7 @@ sim.prototype = {
 	button: function(text) {
 		$(this).append('<a class="wikia-button" id="' + text + '">' + text + '</a>');
 		return this;
-    },
+        },
 
 	addClick: function(handler) {
 		$(this).attr('onclick', handler);
