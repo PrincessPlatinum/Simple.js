@@ -28,7 +28,7 @@ function Sim(id) {
 Sim.prototype = {
 	button: function(text) {
 		var button = '<a class="wikia-button" id="' + text + '">' + text + '</a>';
-                this.e.appendChild(button);
+                this.e.innerHTML += button;
 		return this;
         },
 
