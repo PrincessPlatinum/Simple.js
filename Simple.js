@@ -21,8 +21,6 @@ function Sim(id) {
 
       this.e = document.getElementById(id);
       return this;
-   } else {
-      return about;
    }
 }
 
