@@ -28,10 +28,12 @@ function Sim(id) {
 
 Sim.prototype = {
 	button: function(text) {
+                var container = document.getElementById(this.e);
 		var button = '<a class="wikia-button" id="' + text + '">' + text + '</a>';
-		document.getElementById(this.e).innerHTML += button;
+		var buttonode = document.createTextNode(button);
+                container.appendChild(buttonode);
 		return this;
-    },
+        },
 
 	addClick: function(handler) {
 		document.getElementById(this.e).setAttribute("onclick", handler);
